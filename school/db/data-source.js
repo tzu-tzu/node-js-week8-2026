@@ -6,6 +6,11 @@ const { DataSource } = require('typeorm')
 //（沒註冊的 entity，migration:generate 看不到它，所以這張資料表就不會被建出來）
 // ============================================================
 
+const Class = require('../entities/Class.js');
+const Subject = require('../entities/Subject.js');
+const Student = require('../entities/Student.js');
+const Grade = require('../entities/Grade.js');
+
 const dataSource = new DataSource({
   type: 'postgres',
   host: process.env.DB_HOST || 'localhost',
@@ -19,6 +24,7 @@ const dataSource = new DataSource({
 
   entities: [
     // TODO: 你的 entities
+    Class, Subject, Student, Grade
   ],
   migrations: ['db/migrations/*.js'],
 })

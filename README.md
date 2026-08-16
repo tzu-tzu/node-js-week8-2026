@@ -176,4 +176,10 @@ A：除了 entity，`db/migrations/` 裡生成好的 migration 檔案也要記�
 A：通常是兩個原因。① 忘了把 migration 檔一起推上去（詳細可看上一個 QA）。② 不小心改到了不可更動的檔案（`test/`、`scripts/`、`package.json`、`docker-compose.yml`、`.env.example`）；CI 過程會比對這些檔案的 checksum，只要動過就會直接失敗。
 
 
+## 小筆記
 
+Week 8：Express + TypeORM 整合 — Migration 與 Seeding
+https://hackmd.io/@hexschool/BJloatPHfe
+
+第八堂主線任務
+https://chalk-freedom-ec6.notion.site/3916ab47eb4880228161cbc56c0140a5
